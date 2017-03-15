@@ -11,5 +11,6 @@ class KataTest extends \PHPUnit_Framework_TestCase
     public function nothing()
     {
         $this->assertTrue(true);
+        $this->assertTrue(false);
     }
 }
