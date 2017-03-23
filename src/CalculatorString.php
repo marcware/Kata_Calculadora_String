@@ -3,6 +3,6 @@
 
 namespace Kata;
 
-class Kata
+class CalculatorString
 {
 }
