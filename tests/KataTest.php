@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Kata\Test;
-
 
 use Kata\CalculatorString;
 
