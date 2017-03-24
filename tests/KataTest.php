@@ -106,4 +106,22 @@ class KataTest extends \PHPUnit_Framework_TestCase
         //THEM
         $this->assertEquals(3,$result);
     }
+
+    /**
+     * @test
+     * @group negative
+     * @expectedException        \Exception
+     * @expectedExceptionMessage Number is negative
+     */
+    public function add_string_with_negative_value()
+    {
+        //GIVE
+        $calculatorString = new CalculatorString();
+        //WHEN
+        $stringOfNumbers = "-1";
+        $result= $calculatorString->add($stringOfNumbers);
+        //THEM
+
+    }
+
 }

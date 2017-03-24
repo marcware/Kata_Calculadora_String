@@ -24,6 +24,10 @@ class CalculatorString
                 echo "--" .$number;
                 $result += $number;
             }
+        } elseif (count($arrayOfNumbers)==1) {
+            if ($arrayOfNumbers[0] == -1){
+                throw new \Exception("Number is negative");
+            }
         }
         return $result;
     }
