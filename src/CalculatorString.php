@@ -11,6 +11,7 @@ class CalculatorString
      */
     public function add($cadena)
     {
+
         return $cadena;
     }
 }
