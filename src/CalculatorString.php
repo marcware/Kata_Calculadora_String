@@ -11,9 +11,10 @@ class CalculatorString
      */
     public function add($cadena)
     {
-        if ($cadena == "") {
-            return 0;
+        $result = $cadena;
+        if (empty($cadena)) {
+            $result = 0;
         }
-        return $cadena;
+        return $result;
     }
 }
