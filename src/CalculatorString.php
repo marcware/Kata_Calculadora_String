@@ -14,9 +14,7 @@ class CalculatorString
     public function add($stringOfNumbers)
     {
         $result = $stringOfNumbers;
-        $pattern = sprintf('/(%s)/i',implode('|',self::SEPARATOR));
-        $arrayOfNumbers = preg_split($pattern,$stringOfNumbers);
-
+        $arrayOfNumbers = $this->separateString($stringOfNumbers);
 
         if (empty($stringOfNumbers)) {
             $result = 0;
@@ -27,5 +25,11 @@ class CalculatorString
             }
         }
         return $result;
+    }
+
+    private function separateString($stringOfNumbers)
+    {
+        $pattern = sprintf('/(%s)/i',implode('|',self::SEPARATOR));
+        return preg_split($pattern,$stringOfNumbers);
     }
 }
