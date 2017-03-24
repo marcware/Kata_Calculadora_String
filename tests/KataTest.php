@@ -84,4 +84,18 @@ class KataTest extends \PHPUnit_Framework_TestCase
         //THEM
         $this->assertEquals(6,$result);
     }
+
+    /**
+     * @test
+     */
+    public function add_string_with_more_separators()
+    {
+        //GIVEN
+        $calculatorString = new CalculatorString();
+        //WHEN
+        $stringOfNumbers = "//;\n1;2";
+        $result = $calculatorString->add($stringOfNumbers);
+        //THEM
+        $this->assertEquals(3,$result);
+    }
 }
