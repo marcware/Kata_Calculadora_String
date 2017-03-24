@@ -5,6 +5,8 @@ namespace Kata;
 
 class CalculatorString
 {
+    const SEPARATOR = array(',','\n');
+
     /**
      * @param String $stringOfNumbers
      * @return int
@@ -12,7 +14,10 @@ class CalculatorString
     public function add($stringOfNumbers)
     {
         $result = $stringOfNumbers;
-        $arrayOfNumbers = explode(",", $stringOfNumbers);
+        $pattern = sprintf('/(%s)/i',implode('|',self::SEPARATOR));
+        $arrayOfNumbers = preg_split($pattern,$stringOfNumbers);
+
+
         if (empty($stringOfNumbers)) {
             $result = 0;
         } elseif(count($arrayOfNumbers) > 1) {
