@@ -16,7 +16,7 @@ class CalculatorString
         if (empty($stringOfNumbers)) {
             $result = 0;
         } elseif(count($numbersOfString) > 1) {
-            $result = 3;
+            $result = $numbersOfString[0] + $numbersOfString[1];
         }
         return $result;
     }
