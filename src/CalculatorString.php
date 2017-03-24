@@ -16,7 +16,10 @@ class CalculatorString
         if (empty($stringOfNumbers)) {
             $result = 0;
         } elseif(count($arrayOfNumbers) > 1) {
-            $result = $arrayOfNumbers[0] + $arrayOfNumbers[1];
+            $result = 0;
+            foreach ($arrayOfNumbers as $number) {
+                $result += $number;
+            }
         }
         return $result;
     }
