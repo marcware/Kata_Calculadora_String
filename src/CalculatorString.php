@@ -40,7 +40,7 @@ class CalculatorString
         $pattern = sprintf('/(%s)/i', implode('|', $separator));
 
         $value= preg_split($pattern, $stringOfNumbers);
-        print_r($value);
+        
         return $value;
     }
 
