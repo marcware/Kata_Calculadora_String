@@ -5,7 +5,7 @@ namespace Kata;
 
 class CalculatorString
 {
-    const SEPARATOR = array(',','\n');
+    const SEPARATOR = array(',', '\n');
 
     /**
      * @param String $stringOfNumbers
@@ -18,9 +18,10 @@ class CalculatorString
 
         if (empty($stringOfNumbers)) {
             $result = 0;
-        } elseif(count($arrayOfNumbers) > 1) {
+        } elseif (count($arrayOfNumbers) > 1) {
             $result = 0;
             foreach ($arrayOfNumbers as $number) {
+                echo "--" .$number;
                 $result += $number;
             }
         }
@@ -29,7 +30,23 @@ class CalculatorString
 
     private function separateString($stringOfNumbers)
     {
-        $pattern = sprintf('/(%s)/i',implode('|',self::SEPARATOR));
-        return preg_split($pattern,$stringOfNumbers);
+        $separator = $this->newSeparateString($stringOfNumbers);
+        $pattern = sprintf('/(%s)/i', implode('|', $separator));
+
+        $value= preg_split($pattern, $stringOfNumbers);
+        print_r($value);
+        return $value;
     }
+
+    private function newSeparateString($stringOfNumbers)
+    {
+        if ('//' === substr($stringOfNumbers, 0, 2)) {
+            return array(';');
+        } else {
+            return self::SEPARATOR;
+        }
+    }
+
+
+
 }

@@ -15,6 +15,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group ini
      */
     public function add_empty_string_to_calculator()
     {
@@ -27,7 +28,10 @@ class KataTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(0,$result);
     }
 
-    /** @test */
+    /**
+     * @test
+     * @group ini
+     */
     public function add_string_to_calculator()
     {
 
@@ -44,6 +48,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group ini
      */
     public function add_string_with_two_numbers()
     {
@@ -59,6 +64,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group ini
      */
     public function add_string_with_multiple_numbers()
     {
@@ -73,6 +79,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group ini
      */
     public function add_string_with_numbers_and_break()
     {
@@ -87,6 +94,7 @@ class KataTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group hard
      */
     public function add_string_with_more_separators()
     {
