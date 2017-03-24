@@ -21,11 +21,13 @@ class CalculatorString
         } elseif (count($arrayOfNumbers) > 1) {
             $result = 0;
             foreach ($arrayOfNumbers as $number) {
-                echo "--" .$number;
+                if ($number <0){
+                    throw new \Exception("Number is negative");
+                }
                 $result += $number;
             }
         } elseif (count($arrayOfNumbers)==1) {
-            if ($arrayOfNumbers[0] == -1){
+            if ($arrayOfNumbers[0] <0){
                 throw new \Exception("Number is negative");
             }
         }
