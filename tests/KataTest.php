@@ -40,4 +40,19 @@ class KataTest extends \PHPUnit_Framework_TestCase
         //THEM
         $this->assertEquals(0,$result);
     }
+
+    /**
+     * @test
+     */
+    public function add_string_with_two_numbers()
+    {
+        //GIVEN
+        $calculatorString = new CalculatorString();
+        //WHEN
+        $cadena = "1,2";
+        $result = $calculatorString->add($cadena);
+        //THEM
+        $this->assertEquals(3, $result);
+
+    }
 }
