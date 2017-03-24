@@ -21,8 +21,9 @@ class KataTest extends \PHPUnit_Framework_TestCase
         //GIVEN
         $calculatorString = new CalculatorString();
         //WHEN
-        $stringSum = $calculatorString->add("");
+        $cadena="0";
+        $stringSum = $calculatorString->add($cadena);
         //THEM
-        $this->assertEquals(0,$stringSum);
+        $this->assertEquals($cadena,$stringSum);
     }
 }

@@ -5,8 +5,12 @@ namespace Kata;
 
 class CalculatorString
 {
-    public function add()
+    /**
+     * @param String $cadena
+     * @return int
+     */
+    public function add($cadena)
     {
-        return 1;
+        return $cadena;
     }
 }
