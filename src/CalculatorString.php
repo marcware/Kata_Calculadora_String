@@ -11,7 +11,9 @@ class CalculatorString
      */
     public function add($cadena)
     {
-
+        if ($cadena == "") {
+            return 0;
+        }
         return $cadena;
     }
 }
