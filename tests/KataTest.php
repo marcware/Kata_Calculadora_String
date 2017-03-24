@@ -21,8 +21,8 @@ class KataTest extends \PHPUnit_Framework_TestCase
         //GIVEN
         $calculatorString= new CalculatorString();
         //WHEN
-        $cadena="";
-        $result = $calculatorString->add($cadena);
+        $stringOfNumbers="";
+        $result = $calculatorString->add($stringOfNumbers);
         //THEM
         $this->assertEquals(0,$result);
     }
@@ -34,8 +34,8 @@ class KataTest extends \PHPUnit_Framework_TestCase
         //GIVEN
         $calculatorString = new CalculatorString();
         //WHEN
-        $cadena="1";
-        $stringSum = $calculatorString->add($cadena);
+        $stringOfNumbers="1";
+        $stringSum = $calculatorString->add($stringOfNumbers);
         //THEM
         $this->assertEquals(1,$stringSum);
     }
@@ -50,8 +50,8 @@ class KataTest extends \PHPUnit_Framework_TestCase
         //GIVEN
         $calculatorString = new CalculatorString();
         //WHEN
-        $cadena = "1,2";
-        $result = $calculatorString->add($cadena);
+        $stringOfNumbers = "1,2";
+        $result = $calculatorString->add($stringOfNumbers);
         //THEM
         $this->assertEquals(3, $result);
 

@@ -6,14 +6,14 @@ namespace Kata;
 class CalculatorString
 {
     /**
-     * @param String $cadena
+     * @param String $stringOfNumbers
      * @return int
      */
-    public function add($cadena)
+    public function add($stringOfNumbers)
     {
-        $result = $cadena;
-        $numbersOfString = explode(",", $cadena);
-        if (empty($cadena)) {
+        $result = $stringOfNumbers;
+        $numbersOfString = explode(",", $stringOfNumbers);
+        if (empty($stringOfNumbers)) {
             $result = 0;
         } elseif(count($numbersOfString) > 1) {
             $result = 3;
