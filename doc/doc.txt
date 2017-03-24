@@ -11,3 +11,7 @@ http://blog.juanluisgarciaborrego.com/apuntes-git/
 http://otroblogmas.com/wp-content/uploads/2011/06/PHPUnit-Cheat-Sheet.pdf
 
 https://github.com/alicanteswcraft
+
+REGLAS
+- Commits pequeños
+- Buenos mensajes de commits
