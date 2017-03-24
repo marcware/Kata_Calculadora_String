@@ -12,11 +12,11 @@ class CalculatorString
     public function add($stringOfNumbers)
     {
         $result = $stringOfNumbers;
-        $numbersOfString = explode(",", $stringOfNumbers);
+        $arrayOfNumbers = explode(",", $stringOfNumbers);
         if (empty($stringOfNumbers)) {
             $result = 0;
-        } elseif(count($numbersOfString) > 1) {
-            $result = $numbersOfString[0] + $numbersOfString[1];
+        } elseif(count($arrayOfNumbers) > 1) {
+            $result = $arrayOfNumbers[0] + $arrayOfNumbers[1];
         }
         return $result;
     }
