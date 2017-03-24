@@ -56,4 +56,18 @@ class KataTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(3, $result);
 
     }
+
+    /**
+     * @test
+     */
+    public function add_string_with_multiple_numbers()
+    {
+        //GIVEN
+        $calculatorString = new CalculatorString();
+        //WHEN
+        $stringOfNumbers = "1,2,3,4";
+        $result = $calculatorString->add($stringOfNumbers);
+        //THEM
+        $this->assertEquals(10, $result);
+    }
 }
